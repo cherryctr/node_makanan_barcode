@@ -1,0 +1,28 @@
+
+<h2>List of Makanans with Barcodes</h2>
+<table border="1">
+	<thead>
+		<tr>
+			<th>ID</th>
+			<th>Nama Makanan</th>
+			<th>Kode Makanan</th>
+			<th>Harga</th>
+			<th>Kategori</th>
+			<th>Barcode</th>
+		</tr>
+	</thead>
+	<tbody>
+		<% makanans.forEach(makanans => { %>
+		<tr>
+			<td><%= makanans.id %></td>
+			<td><%= makanans.nama_makanan %></td>
+			<td><%= makanans.kode_makanan %></td>
+			<td><%= makanans.harga_makanan %></td>
+			<td><%= makanans.kategori_makanan %></td>
+			<td>
+				<img src="<%= makanans.barcodeBase64 %>" alt="Barcode" />
+			</td>
+		</tr>
+		<% }) %>
+	</tbody>
+</table>
